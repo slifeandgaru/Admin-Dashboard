@@ -1,19 +1,21 @@
 const mongoose = require('../config/connectDB')
 
-let productSchema = mongoose.Schema({
+let animalFeedSchema = mongoose.Schema({
     productname: String,
     price: String,
     classifyID: String,
     description: String,
+    weight: String,
+    unit: String,
     amount: String,
     listPicture:[]
 },{
-    collection: 'product'
+    collection: 'animalFeed'
 })
 
 // tạo model
-const productModel = mongoose.model("product", productSchema);
+const animalFeed = mongoose.model("animalFeed", animalFeedSchema);
 
 // export
-module.exports = productModel;
+module.exports = animalFeed;
 
